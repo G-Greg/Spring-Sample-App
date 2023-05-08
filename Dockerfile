@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Másoljuk át a pom.xml-t a munkakönyvtárba
-COPY pom.xml .
+COPY . .
 
 # Futtassuk a Maven-t a függőségek letöltéséhez
 RUN ["mvn", "dependency:resolve"]
